@@ -2,6 +2,8 @@ FROM node:20.3.1-alpine3.17
 
 RUN apk add git
 
+RUN apk add tzdata
+
 RUN	cd ~/ && git clone https://github.com/Integrity-Ltd/powermeter-utils.git && cd ~/powermeter-utils && npm install
 
 RUN cd ~/ && git clone https://github.com/Integrity-Ltd/powermeter-timed-service.git && cd ~/powermeter-timed-service && npm install
